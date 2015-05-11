@@ -16,7 +16,7 @@ var imagemin = require('gulp-imagemin');
 var notify = require('gulp-notify');
 
 var config = {
-	appDir: './app/assets/',
+	appDir: './app',
     bowerDir: './bower_components/bootstrap/dist',
     buildDir: './build',
 };

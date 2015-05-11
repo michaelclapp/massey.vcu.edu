@@ -1,0 +1,125 @@
+/*----------------------------------------------------------*/
+// TOP NAVIGATION
+/*----------------------------------------------------------*/
+
+.navbar{
+	margin-bottom: 0px;
+	border-radius: 0;
+}
+.navbar-header{
+	min-height: 58px;
+}
+
+.navbar-default{
+	border: 0;
+}
+.navbar-toggle{
+	padding: 15px 10px;
+}
+.navbar-default .navbar-toggle{
+	border: none;
+	&:hover{
+		background: none;
+	}
+	&:focus{
+		background: none;
+	}
+}
+
+/*----------------------------------------------------------*/
+// SEARCH BOX
+/*----------------------------------------------------------*/
+
+.searchbox{
+	width: 100%;
+	border: 0 !important;
+
+	input.form-control, .form-control:focus{
+		border-radius: 0 !important;
+		background: $gray;
+		border: 0 !important;
+		box-shadow: 0 0 0 0 !important;
+		color: #eee !important;
+		height: 100px;
+		font-size: 30px;
+		font-style: italic;
+		@media (max-width: $small) {
+	    	font-size: 22px;
+	    	height: 50px;
+	    }
+		&::-moz-placeholder{ 
+			color: #bbb;
+		}
+		&::-webkit-input-placeholder {
+			color: #bbb;
+		}
+
+	}
+	.input-group-addon {
+	    background: $gray;
+	    border: medium none;
+	    border-radius: 0;
+	    color: #bbb;
+	    padding-right: 20px;
+	}	
+	
+}
+
+/*----------------------------------------------------------*/
+// MAIN NAVIGATION
+/*----------------------------------------------------------*/
+
+.main-nav .container {
+    position: relative;
+}
+
+.main-nav{
+	background: -moz-linear-gradient(left,  rgba(248,248,248,1) 30%, rgba(248,248,248,.2) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(248,248,248,1)), color-stop(100%,rgba(248,248,248,.2))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(248,248,248,1) 30%,rgba(248,248,248,.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(248,248,248,1) 30%,rgba(248,248,248,.2) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(248,248,248,1) 30%,rgba(248,248,248,.2) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(248,248,248,1) 30%,rgba(248,248,248,.2) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#00f8f8f8',GradientType=1 ); /* IE6-9 */
+	border-right: 0;
+	border-left: 0; 
+	z-index: 900;
+	a {
+    color: #303030;
+    font-family: serif;
+    font-size: 28px;
+    line-height: 55px !important;
+
+    @media (max-width: $medium) {
+		font-size: 24px;
+	}
+	}
+}
+
+.main-nav .nav > li > a:hover, .nav > li > a:focus {
+    background: inherit;
+    color: $blue;
+}
+
+.massey-logo {
+    position: absolute;
+    width: 200px;
+    z-index: 9999;
+    margin-top: 2px;
+    
+    @media (min-width: $large) {
+		//margin-left: 100px;
+	}
+	@media (max-width: $small) {
+		height: 44px;
+	    left: 50%;
+	    margin-left: -60px;
+	    top: -1px;
+	    width: 120px;
+	}
+
+}
+
+.massey-logo img{
+	width: 100%;
+}

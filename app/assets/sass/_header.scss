@@ -1,0 +1,135 @@
+/*----------------------------------------------------------*/
+// VCU IDENTITY
+/*----------------------------------------------------------*/
+
+#vcuIdentityWrapper {
+    background-color: $yellow;
+    background-image: url("../images/body-bg.gif");
+    background-position: center top;
+    background-repeat: repeat-x;
+    display: block;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#vcuIdentity {
+    background-color: $yellow;
+    height: 54px;
+    margin: 0 auto;
+    max-width: 982px;
+    padding: 0;
+    width: 100%;
+    
+    h1 {
+    margin: 0;
+    padding: 0;
+	    a.logo {
+	    background: url("../images/vcubrand.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	    border: 0 none;
+	    display: block;
+	    height: 60px;
+	    margin: 0 0 0 30px;
+	    padding: 0;
+	    text-decoration: none;
+	    text-indent: -9999px;
+	    width: 804px;
+		}
+		a.searchLink{
+			position: absolute;
+			top: 0;
+			right: 20px;
+			color: #fff;
+			font-size: 16px;
+			padding: 8px;
+		}
+	}
+
+	h2 {
+    float: right;
+    margin: 0;
+    padding: 0;
+	    a {
+	    background: url("../images/makeitreal.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	    border: 0 none;
+	    display: block;
+	    height: 31px;
+	    margin: -37px 40px 0 0;
+	    padding: 0;
+	    text-decoration: none;
+	    text-indent: -9999px;
+	    width: 109px;
+		}	
+	}
+
+}
+
+
+@media screen and (max-width: 995px) {
+	#vcuIdentity {
+    	max-width: 840px !important;
+	}
+
+	#vcuIdentity h1 a.logo {
+		background: url("../images/vcubrand-768.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+	    width: 659px !important;
+	}
+	#vcuIdentity h2 a {
+	    margin-top: -41px !important;
+	}
+}
+
+@media screen and (max-width: 873px) {
+
+	#vcuIdentity {
+	    margin: 0 auto;
+	    max-width: 670px !important;
+	}
+
+	#vcuIdentity h1 a.logo {
+	    background: url("../images/vcubrand-600.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+	    border: 0 none !important;
+	    text-decoration: none !important;
+	    width: 519px !important;
+	}
+	#vcuIdentity h2 a {
+	    background: url("../images/makeitreal-600.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+	    border: 0 none !important;
+	    height: 39px !important;
+	    margin-top: -46px !important;
+	    text-decoration: none !important;
+	    width: 84px !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+    background-position: 0 35px !important;
+	}
+	#vcuIdentityWrapper {
+	    background: url("../images/body-bg-sm.gif") repeat-x scroll center top #fff !important;
+	    height: 35px !important;
+	}
+	#vcuIdentity header {
+	    height: 35px !important;
+	}
+	#vcuIdentity {
+	    height: 35px !important;
+	    max-width: 100% !important;
+	}
+
+	#vcuIdentity h1 a.logo {
+    background: url("../images/vcuseal.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border: 0 none !important;
+    height: 35px !important;
+    margin: 0 auto !important;
+    text-decoration: none !important;
+    width: 99px !important;
+	}	
+	#vcuIdentity h2 a {
+	    border: 0 none !important;
+	    display: none !important;
+	    text-decoration: none !important;
+	}
+}

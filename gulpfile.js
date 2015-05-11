@@ -17,7 +17,7 @@ var notify = require('gulp-notify');
 
 var config = {
 	appDir: './app/assets/',
-    bowerDir: './bower_components/bootstrap-sass',
+    bowerDir: './bower_components/bootstrap/dist',
     buildDir: './build',
 };
 
@@ -38,18 +38,22 @@ gulp.task('css', function() {
 
     return es.merge(styles)
     .pipe(concat('all.css'))
-	.pipe(gulp.dest(config.buildDir + '/css'))
-	.pipe(minifyCss({compatibility: 'ie8'}))
-	.pipe(rename('all.min.css'))
-	.pipe(sourcemaps.write('.'))
-	.pipe(plumber.stop())
-	.pipe(gulp.dest(config.buildDir + '/css'))
+  	.pipe(gulp.dest(config.buildDir + '/css'))
+  	.pipe(minifyCss({compatibility: 'ie8'}))
+  	.pipe(rename('all.min.css'))
+  	.pipe(sourcemaps.write('.'))
+  	.pipe(plumber.stop())
+  	.pipe(gulp.dest(config.buildDir + '/css'))
 });
 
-// move fonts
-gulp.task('fonts', function() {
-    return gulp.src(config.bowerDir + '/assets/fonts/**/*')
-    .pipe(gulp.dest(config.buildDir + '/fonts'));
+// move bower components
+gulp.task('bower', function() {
+    return gulp.src([
+      config.bowerDir + '/css/bootstrap.css',
+      config.bowerDir + '/js/bootstrap.js',
+      config.bowerDir + '/fonts/**/*'
+      ]) 
+    .pipe(gulp.dest(config.buildDir + '/vendor'))
 });
 
 // compress images
@@ -69,4 +73,4 @@ gulp.task('watch', function() {
 
 
 // setup default task
-gulp.task('default', ['css', 'fonts', 'images', 'watch']);
+gulp.task('default', ['css', 'bower', 'images', 'watch']);

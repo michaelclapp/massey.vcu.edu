@@ -10,7 +10,7 @@
 // CAROUSEL
 /*----------------------------------------------------------*/
 
-.carousel{
+.hero .carousel{
 	margin-top: -87px;
 
 	@media (max-width: $small) {
@@ -18,14 +18,14 @@
 	}
 
 }
-.carousel-inner .item{
+.hero .carousel-inner .item{
 	max-height: 620px;
 	img{
 	width: 100%;
 	}
 }
 
-.carousel-caption{
+.hero .carousel-caption{
 	width: 80%;
 	bottom: 15%;
 	left: 10%;
@@ -42,7 +42,7 @@
 	}
 }
 
-.carousel-indicators{
+.hero .carousel-indicators{
 	bottom: 10% !important;
 	left: 10%;
 	text-align: left;
@@ -84,10 +84,135 @@
 
 
 
+/*----------------------------------------------------------*
+* TESTAMONIAL CAROUSEL
+/*----------------------------------------------------------*/
+#testamonial-carousel .carousel-indicators{
+	top: 20px;
+	height: 20px;
+}
 
+#testamonial-carousel{
+	margin: 100px;
+}
 
+#testamonial-carousel .item img {
+    width: 40%;
+    margin-left: 60%;
+    height: auto;
+}
 
+#testamonial-carousel .carousel-caption {
+    background: none repeat scroll 0 0 #555 !important;
+    top: 0;
+    display: block;
+    height: auto;
+    min-height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 60%;
+    text-shadow: none;
+    padding: 60px 80px;
+    color: #eee;
+}
 
+@media screen and (max-width: 1199px) {
+	#testamonial-carousel .carousel-caption {
+		padding: 20px !important;
+		background: #333;
+	}
+}
+
+#testamonial-carousel .carousel-caption > h2{
+	color: #eee;
+}
+
+#testamonial-carousel .carousel-caption p{
+	font-size: 16px;
+}
+
+.testamonial-title{
+	text-transform: uppercase;
+	color: $blue;
+	font-size: 14px;
+}
+.testamonial-title::after{
+	content: "";
+	width: 100px;
+	height: 3px;
+	background: #777;
+	margin: 20px auto;
+	display: block;
+}
+
+.read-more{
+	color: $blue;
+	&:hover{
+		color: #eee;
+		text-decoration: none;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#testamonial-carousel{
+		margin: 50px;
+	}
+	#testamonial-carousel .carousel-caption {
+		padding: 10px !important;
+	}
+	#testamonial-carousel .carousel-caption > h2{
+		margin-top: 10px;
+		font-size:	20px;
+	}
+	.testamonial-title{
+		margin: 10px 0 !important;
+	}
+	.testamonial-title::after{
+		margin: 10px auto;
+	}
+	#testamonial-carousel .carousel-caption p{
+		font-size: 13px !important;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	// #testamonial-carousel .carousel-caption {
+	// 	position: relative;
+	// 	width: 100%;
+	// }
+	// #testamonial-carousel .item img {
+	// 	width: 100%;
+	// 	margin: 0;
+	// }
+	.read-more{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		background: #555;
+		padding: 3px 0;
+	}
+}
+@media screen and (max-width: 545px) {
+	#testamonial-carousel .carousel-caption {
+		position: relative;
+		width: 100%;
+		padding: 20px !important;
+	}
+	#testamonial-carousel .item img {
+		width: 100%;
+		margin: 0;
+	}
+	.read-more{
+		position: static;
+		bottom: inherit;
+		left: inherit;
+		display: block;
+		padding: 0;
+	}
+}
 /*----------------------------------------------------------*/
 // HOME CONTENT
 /*----------------------------------------------------------*/
@@ -107,6 +232,7 @@
 
 .spotlights-wrapper{
 	background: #fafafa;
+	padding-top: 25px;
 	.row{
 		margin-top: 20px;
 	}
@@ -218,6 +344,12 @@
     }
 }
 
+.border-top{
+	border-top: 1px solid #ccc;
+}
+.border-bottom{
+	border-bottom: 1px solid #ccc;
+}
 
 // .action .fa{
 // 		font-size: 70px;
@@ -238,7 +370,9 @@
 /*----------------------------------------------------------*
 * TABS
 /*----------------------------------------------------------*/
-
+.massey-tabs{
+	padding-top: 40px;
+}
 .massey-tabs .nav-pills {
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
@@ -297,6 +431,16 @@
 	right: 0;
 	width: 1px;
 }
+#news .news-date{
+	width: 55px;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+#news .news-date::after{
+	background: transparent;
+}
 .month {
     display: block;
     font-weight: bold;
@@ -313,8 +457,9 @@
 #events > a, #news > a {
     position: absolute;
     right: 15px;
-    top: 10px;
+    top: 50px;
 }
+
 
 /*----------------------------------------------------------*
 * FOOTER
@@ -323,7 +468,31 @@
 	height: 300px;
 	width: 100%;
 	display: block;
-	background: #ccc;
+	background: #fafafa;
 	padding: 50px;
 }
 
+
+
+
+
+/*----------------------------------------------------------*
+* testing
+/*----------------------------------------------------------*/
+
+.navbar.main-nav.affix {
+    margin-top: 0;
+    padding-top: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .95);
+    border-bottom: 1px solid #ccc;
+}
+.affix-logo {
+	display: none;
+}
+.affix .affix-logo{
+	    display: block;
+	    position: absolute;
+	    width: 15%;
+}

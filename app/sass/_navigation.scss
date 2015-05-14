@@ -5,6 +5,7 @@
 .navbar{
 	margin-bottom: 0px;
 	border-radius: 0;
+	z-index: 999;
 }
 .navbar-header{
 	min-height: 58px;
@@ -29,7 +30,10 @@
 /*----------------------------------------------------------*/
 // SEARCH BOX
 /*----------------------------------------------------------*/
-
+.searchWrap{
+	position: relative;
+	z-index: 99;
+}
 .searchbox{
 	width: 100%;
 	border: 0 !important;
@@ -69,6 +73,18 @@
 // MAIN NAVIGATION
 /*----------------------------------------------------------*/
 
+.nav-bg{
+	background: #f8f8f8;
+	height: 0px;
+	transition:all 150ms ease-in-out;
+	z-index: 1;
+}
+
+
+
+
+
+
 .main-nav .container {
     position: relative;
 }
@@ -85,14 +101,14 @@
 	border-left: 0; 
 	z-index: 900;
 	a {
-    color: #303030;
-    font-family: serif;
-    font-size: 28px;
-    line-height: 55px !important;
+	    color: #303030;
+	    font-family: serif;
+	    font-size: 28px;
+	    line-height: 55px !important;
 
-    @media (max-width: $medium) {
-		font-size: 24px;
-	}
+	    @media (max-width: $large) {
+			font-size: 24px;
+		}
 	}
 }
 
@@ -122,4 +138,11 @@
 
 .massey-logo img{
 	width: 100%;
+}
+
+.yamm .dropdown-menu{
+	background-color: #f8f8f8;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0;
 }

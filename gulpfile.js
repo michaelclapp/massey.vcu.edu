@@ -47,11 +47,12 @@ gulp.task('css', function() {
 });
 
 // move bower components
-gulp.task('bower', function() {
+gulp.task('vendor', function() {
     return gulp.src([
       config.bowerDir + '/css/bootstrap.css',
       config.bowerDir + '/js/bootstrap.js',
-      config.bowerDir + '/fonts/**/*'
+      config.bowerDir + '/fonts/**/*',
+      config.appDir + '/vendor/**/*'
       ]) 
     .pipe(gulp.dest(config.buildDir + '/vendor'))
 });
@@ -73,4 +74,4 @@ gulp.task('watch', function() {
 
 
 // setup default task
-gulp.task('default', ['css', 'bower', 'images', 'watch']);
+gulp.task('default', ['css', 'vendor', 'images', 'watch']);

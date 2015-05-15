@@ -76,8 +76,12 @@
 .nav-bg{
 	background: #f8f8f8;
 	height: 0px;
-	transition:all 150ms ease-in-out;
-	z-index: 1;
+	transition:all 50ms ease-in-out;
+	z-index: 99;
+	margin-top: 8px;
+	width: 100%;
+	position: relative;
+	float: left;
 }
 
 
@@ -117,6 +121,10 @@
     color: $blue;
 }
 
+.yamm .nav .open > a,.yamm .nav .open >.yamm a:hover,.yamm .nav .open > a:focus{
+	background-color: #f8f8f8 !important;
+}
+
 .massey-logo {
     position: absolute;
     width: 200px;
@@ -135,14 +143,31 @@
 	}
 
 }
-
 .massey-logo img{
 	width: 100%;
 }
-
 .yamm .dropdown-menu{
 	background-color: #f8f8f8;
 	border: 0;
 	box-shadow: none;
 	border-radius: 0;
 }
+
+.nav-col{
+	border-right: 1px solid #dadada;
+	min-height: 190px;
+	&:last-of-type, &:first-of-type{
+		border-right: 0;
+	}
+}
+
+.main-nav .dropdown-menu a{
+	color: $blue;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+
+
+
+

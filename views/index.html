@@ -96,7 +96,7 @@
     </nav>
 
 <div class="hero">
-
+  <div class="nav-bg">
   <!-- <nav data-spy="affix" data-offset-top="115" class="navbar main-nav hidden-xs"> -->
   <nav class="navbar main-nav hidden-xs yamm" role="navigation"> 
     <div class="container">
@@ -108,46 +108,11 @@
                <li class="grid-demo">
                   <div class="container">
                     <div class="row">
-                      <div class="col-sm-12">.col-sm-12</div>
+                      <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Menu 1</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Menu 2</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Menu 3</a></div>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-6">.col-sm-6</div>
-                      <div class="col-sm-6">.col-sm-6</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-4">.col-sm-4</div>
-                      <div class="col-sm-4">.col-sm-4</div>
-                      <div class="col-sm-4">.col-sm-4</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-3">.col-sm-3</div>
-                      <div class="col-sm-3">.col-sm-3</div>
-                      <div class="col-sm-3">.col-sm-3</div>
-                      <div class="col-sm-3">.col-sm-3</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-2">.col-sm-2</div>
-                      <div class="col-sm-2">.col-sm-2</div>
-                      <div class="col-sm-2">.col-sm-2</div>
-                      <div class="col-sm-2">.col-sm-2</div>
-                      <div class="col-sm-2">.col-sm-2</div>
-                      <div class="col-sm-2">.col-sm-2</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                      <div class="col-sm-1">.col-sm-1</div>
-                    </div>
-                  </div>
                   </li>
              </ul>
           </li>
@@ -157,7 +122,7 @@
       </div><!--/.nav-collapse -->
     </div>
   </nav>
-
+</div> <!--/.nav-bg -->
     
     <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
       <!-- Indicators -->
@@ -466,6 +431,26 @@ $(document).on('click', '.yamm .dropdown-menu', function(e) {
 })
 </script> 
 
+<script>
+var currentClasses = "";
+var loop = setInterval(checkClassChange, 100);
+function checkClassChange() {
+    var classes = $("li.yamm").attr("class");   
+    if (currentClasses != classes)
+    {
+        currentClasses = classes;
+        $("li.yamm").trigger("classChange");
+    }
+};
+$(document).on("classChange","li.yamm",function() {
+    
+    if (currentClasses.indexOf("open") >= 0)
+        $(".nav-bg").css("height", "400px");
+    else
+        $(".nav-bg").css("height", "0px");
+});
+
+</script>
 
   </body>
 </html>

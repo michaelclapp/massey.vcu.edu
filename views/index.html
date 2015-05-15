@@ -109,15 +109,41 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
-                      <div class="col-sm-3 nav-col"><a href="#">Menu 1</a></div>
-                      <div class="col-sm-3 nav-col"><a href="#">Menu 2</a></div>
-                      <div class="col-sm-3 nav-col"><a href="#">Menu 3</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Patient Care Menu 1</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Patient Care Menu 2</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Patient Care Menu 3</a></div>
                     </div>
                   </li>
              </ul>
           </li>
-          <li><a href="#">Research</span></a></li>
-          <li><a href="#">Education & Training</a></li>
+
+          <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Research</a>
+            <ul class="dropdown-menu">
+               <li class="grid-demo">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Research 1</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Research 2</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Research 3</a></div>
+                    </div>
+                  </li>
+             </ul>
+          </li>
+          
+          <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Education & Training</a>
+            <ul class="dropdown-menu">
+               <li class="grid-demo">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Education & Training Menu 1</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Education & Training Menu 2</a></div>
+                      <div class="col-sm-3 nav-col"><a href="#">Education & Training Menu 3</a></div>
+                    </div>
+                  </li>
+             </ul>
+          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -431,26 +457,47 @@ $(document).on('click', '.yamm .dropdown-menu', function(e) {
 })
 </script> 
 
-<script>
-var currentClasses = "";
-var loop = setInterval(checkClassChange, 100);
-function checkClassChange() {
-    var classes = $("li.yamm").attr("class");   
-    if (currentClasses != classes)
-    {
-        currentClasses = classes;
-        $("li.yamm").trigger("classChange");
-    }
-};
-$(document).on("classChange","li.yamm",function() {
-    
-    if (currentClasses.indexOf("open") >= 0)
-        $(".nav-bg").css("height", "400px");
-    else
-        $(".nav-bg").css("height", "0px");
-});
 
-</script>
+
+// <script>
+// var currentClasses = "";
+// var loop = setInterval(checkClassChange, 100);
+// function checkClassChange() {
+//     var classes = $("li.yamm").attr("class");   
+//     if (currentClasses != classes)
+//     {
+//         currentClasses = classes;
+//         $("li.yamm").trigger("classChange");
+//     }
+// };
+// $(document).on("classChange","li.yamm",function() {
+    
+//     if (currentClasses.indexOf("open") >= 0)
+//         $(".nav-bg").css("height", "400px");
+//     else
+//         $(".nav-bg").css("height", "0px");
+// });
+
+// </script>
+
+
+<script type="text/javascript" language="javascript">
+         $(document).ready(function() {
+
+            $('li.yamm').hover(
+        
+               function () {
+                $('.dropdown-menu', this).fadeTo("slow", 1)
+                $('.nav-bg').css({"height":"400px"})
+               }, 
+        
+               function () {
+                $('.dropdown-menu', this).fadeTo("fast", 0)
+                $('.nav-bg').css({"height":"0px"});
+               }
+            );
+         });
+      </script>
 
   </body>
 </html>

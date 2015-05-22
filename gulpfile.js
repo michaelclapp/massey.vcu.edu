@@ -46,6 +46,14 @@ gulp.task('css', function() {
   	.pipe(gulp.dest(config.buildDir + '/css'))
 });
 
+// concatinate & minify js
+gulp.task('scripts', function () {
+    return gulp.src(config.appDir + '/js/*.js')
+        .pipe(uglify())
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest(config.buildDir + '/js'))
+});
+
 // move bower components
 gulp.task('vendor', function() {
     return gulp.src([

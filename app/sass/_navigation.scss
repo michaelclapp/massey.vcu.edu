@@ -7,6 +7,14 @@
 	border-radius: 0;
 	z-index: 999;
 }
+.navbar-nav > li > a{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	@media (max-width: $small){
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
 .navbar-header{
 	min-height: 58px;
 }
@@ -78,9 +86,9 @@
 	height: 0px;
 	transition:all 50ms ease-in-out;
 	z-index: 99;
-	margin-top: 8px;
+	margin-top: 0;
 	width: 100%;
-	position: relative;
+	position: absolute;
 	float: left;
 	@media (max-width: $small) {
 		display: none;

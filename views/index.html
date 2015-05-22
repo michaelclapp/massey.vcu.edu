@@ -471,63 +471,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../build/vendor/bootstrap.js"></script>
-
-<script> 
-$('.searchWrap').hide();
-$(".searchLink").click(function(){
-  if ($('.searchbox').is(':visible')){
-     $('.searchWrap').slideUp('fast');
-  }else if ($('.searchbox').is(':hidden')){
-    $('.searchWrap').slideDown('fast');
-  }
-});
-
-$(document).on('click', '.yamm .dropdown-menu', function(e) {
-  e.stopPropagation()
-})
-</script> 
-
-
-
-// <script>
-// var currentClasses = "";
-// var loop = setInterval(checkClassChange, 100);
-// function checkClassChange() {
-//     var classes = $("li.yamm").attr("class");   
-//     if (currentClasses != classes)
-//     {
-//         currentClasses = classes;
-//         $("li.yamm").trigger("classChange");
-//     }
-// };
-// $(document).on("classChange","li.yamm",function() {
-    
-//     if (currentClasses.indexOf("open") >= 0)
-//         $(".nav-bg").css("height", "400px");
-//     else
-//         $(".nav-bg").css("height", "0px");
-// });
-
-// </script>
-
-
-<script type="text/javascript" language="javascript">
-         $(document).ready(function() {
-
-            $('li.yamm').hover(
-        
-               function () {
-                $('.dropdown-menu', this).fadeTo("slow", 1)
-                $('.nav-bg').css({"height":"400px"})
-               }, 
-        
-               function () {
-                $('.dropdown-menu', this).fadeTo("fast", 0)
-                $('.nav-bg').css({"height":"0px"});
-               }
-            );
-         });
-      </script>
+    <script src="../build/js/all.js"></script>
 
   </body>
 </html>

@@ -3,10 +3,40 @@
 /*----------------------------------------------------------*/
 
 .footer{
-	height: 300px;
 	width: 100%;
 	display: block;
 	background: #fafafa;
-	padding: 50px;
+	padding: 40px 0;
+	ul{
+		padding: 0;
+		list-style: none;
+	}
+	a{
+		font-weight: bold;
+		padding: 3px 0;
+		display: block;
+		&:hover{
+			color: $blue;
+		}
+	}
 }
 
+.sub-footer{
+	background: #eee;
+	padding: 20px 0;
+	a{
+		display: block;
+		img{
+			width: 100%;
+		}
+	}
+	#social a {
+		display: inline-block;
+		margin: 0 5px;
+		.fa{
+				font-size: 40px;
+				color: #aaa;
+				display: inline-block;
+			}
+	}
+}

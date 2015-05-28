@@ -28,6 +28,7 @@
 		display: block;
 		img{
 			width: 100%;
+			max-width: 300px;
 		}
 	}
 	#social a {
@@ -38,5 +39,14 @@
 				color: #aaa;
 				display: inline-block;
 			}
+	}
+}
+
+.copyright{
+	background: #fff;
+	padding: 10px 0;
+	text-align: center;
+	p{
+		margin: 0;
 	}
 }

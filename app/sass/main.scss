@@ -73,7 +73,7 @@ a{
 	height: 85px;
 	background: $blue;
 	//border: 2px solid #2f84a3;
-    border-radius: 3px;
+    border-radius: 2px;
 	a{
 		color: #fff;
 		&:hover{
@@ -122,18 +122,38 @@ a{
 }
 .make-appointment{
 	background: #67c6b4;
+	&:hover{
+		background: lighten(#67c6b4, 5%);
+	}
 }
 .find-a-physician{
 	background: #60b6d4;
+	&:hover{
+		background: lighten(#60b6d4, 5%);
+	}
 }
 .cancer-types{
 	background: #778c9a;
+	cursor: pointer;
+	&:hover{
+		background: lighten(#778c9a, 5%);
+		.form-control{
+			background: lighten(#778c9a, 5%);
+			cursor: pointer;
+		}
+	}
 }
 .patient-portal{
 	background: #b2bb1c;
+	&:hover{
+		background: lighten(#b2bb1c, 5%);
+	}
 }
 .clinical-trial{
 	background: #febe10;
+	&:hover{
+		background: lighten(#febe10, 5%);
+	}
 }
 .action .form-group {
     width: 95%;

@@ -48,9 +48,7 @@ a{
 
 
 .quick-links{
-    margin-top: -76px;
     z-index: 99;
-    padding: 0 30px;
     position: relative;
 }
 .quick-links .list-group-item {
@@ -72,7 +70,6 @@ a{
 	position: relative;
 	height: 85px;
 	background: $blue;
-	//border: 2px solid #2f84a3;
     border-radius: 2px;
 	a{
 		color: #fff;
@@ -122,18 +119,21 @@ a{
 }
 .make-appointment{
 	background: #67c6b4;
+	//border-bottom: 5px solid darken(#67c6b4, 10%);
 	&:hover{
 		background: lighten(#67c6b4, 5%);
 	}
 }
 .find-a-physician{
 	background: #60b6d4;
+	//border-bottom: 5px solid darken(#60b6d4, 10%);
 	&:hover{
 		background: lighten(#60b6d4, 5%);
 	}
 }
 .cancer-types{
 	background: #778c9a;
+	//border-bottom: 5px solid darken(#778c9a, 10%);
 	cursor: pointer;
 	&:hover{
 		background: lighten(#778c9a, 5%);
@@ -145,12 +145,14 @@ a{
 }
 .patient-portal{
 	background: #b2bb1c;
+	//border-bottom: 5px solid darken(#b2bb1c, 10%);
 	&:hover{
 		background: lighten(#b2bb1c, 5%);
 	}
 }
 .clinical-trial{
 	background: #febe10;
+	//border-bottom: 5px solid darken(#febe10, 10%);
 	&:hover{
 		background: lighten(#febe10, 5%);
 	}
@@ -208,6 +210,12 @@ a{
 /*----------------------------------------------------------*
 * EVENTS AND NEWS TABS
 /*----------------------------------------------------------*/
+
+.news-events{
+	@media (max-width: $medium) {
+			clear: both;
+		}
+}
 
 .massey-tabs{
 	padding-top: 40px;
@@ -304,6 +312,22 @@ a{
     position: absolute;
     right: 15px;
     top: 50px;
+}
+
+
+/*----------------------------------------------------------*
+* MASSEY HIGHTLIGHT
+/*----------------------------------------------------------*/
+
+.massey-highlight{
+	background: #fff;
+	padding: 50px 0;
+	margin: 0 auto;
+	box-sizing: border-box;
+	img{
+		margin-bottom: 20px;
+		max-height: 120px;
+	}
 }
 
 

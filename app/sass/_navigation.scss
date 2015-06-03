@@ -130,14 +130,17 @@
 }
 
 .yamm .nav .open > a,.yamm .nav .open >.yamm a:hover,.yamm .nav .open > a:focus{
-	background-color: #f8f8f8 !important;
+	background-color: transparent !important;
+}
+.yamm .nav .open > a:focus{
+	color: #303030;
 }
 
 .massey-logo {
     position: absolute;
     width: 200px;
     z-index: 9999;
-    margin-top: 2px;
+    margin-top: 10px;
     
     @media (min-width: $large) {
 		//margin-left: 100px;

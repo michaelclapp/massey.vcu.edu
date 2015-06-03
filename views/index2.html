@@ -22,6 +22,44 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style>
+  .action{
+    margin-bottom: 0;
+    border-radius: 0;
+    transition: all 180ms ease-in-out 0s;
+  }
+  .action:hover{
+
+  }
+  .tab-pane ul li{
+    width: 24%;
+  }
+  .spotlights-wrapper{
+    padding: 0;
+  }
+.cancer-types{
+  background: #fafafa;
+}
+.cancer-types .form-control{
+  -moz-appearance: none;
+}
+.cancer-types:hover{
+  background: #fafafa;
+}
+.cancer-types:hover .form-control{
+  background: #fafafa;
+}
+.cancer-types .form-group{
+    position: relative;
+}
+.cancer-types .fa{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+</style>
+
 </head>
 
 <body>
@@ -209,104 +247,125 @@
                         </div>
                     </div>
                 </div>
+            </div> <!-- end carousel -->
+            
+            </div> <!-- end hero -->
+            
+
+
+            <!-- call to action buttons -->
+            <div class="action-buttons">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-3 action make-appointment">
+                          <a href="#">
+                              <span>
+                                  <i class="fa fa-calendar"></i>
+                                  <h2>Make an appointment</h2>
+                              </span>
+                          </a>
+                      </div>
+                      <div class="col-md-3 col-sm-3 action find-a-physician">
+                          <a href="#">
+                              <span>
+                                <i class="fa fa-user-md"></i>
+                                <h2>Find a physician</h2>
+                              </span>
+                          </a>
+                      </div>
+                      <div class="col-md-3 col-sm-3 action patient-portal">
+                          <a href="#">
+                              <span>
+                            <i class="fa fa-user"></i>
+                            <h2><el>my<el>VCU PATIENT PORTAL</h2>
+                        </span>
+                          </a>
+                      </div>
+                      <div class="col-md-3 col-sm-3 action clinical-trial">
+                          <a href="#">
+                            <span>
+                              <i class="fa fa-search-plus"></i>
+                              <h2>Find a clinical trial</h2>
+                            </span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
             </div>
-            <!-- end carousel -->
-            </div>
-            <!-- end hero -->
+            <!-- /call to action buttons -->
+
+           
+
+
+
+
+
+
+
+
+
             <div class="container-fluid spotlights-wrapper border-bottom">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4 col-sm-5 navbar-right quick-links">
-                            <div class="action make-appointment">
-                                <a href="#">
-                                    <!-- <img src="images/action.jpg" alt=""> -->
-                                    <span>
-            <i class="fa fa-calendar"></i>
-            <h2>Make an appointment</h2>
-          </span>
-                                </a>
-                            </div>
-                            <div class="action find-a-physician">
-                                <a href="#">
-                                    <!-- <img src="images/action.jpg" alt=""> -->
-                                    <span>
-            <i class="fa fa-user-md"></i>
-            <h2>Find a physician</h2>
-          </span>
-                                </a>
-                            </div>
-                            <div class="action cancer-types">
-                                <!-- <img src="images/action.jpg" alt=""> -->
-                                <span>
-            <i class="fa fa-search"></i>
-    
-               <div class="form-group">
-                <select class="form-control" id="" onChange="window.location.replace(this.options[this.selectedIndex].value)">
-                  <option>Cancer types</option>
-                  <option value="https://www.massey.vcu.edu/cancer/bladder/">Bladder cancer</option>
-                  <option value="https://www.massey.vcu.edu/cancer/bone/">Bone cancer</option>
-                  <option value="">Brain and neurological cancer</option>
-                  <option value="">Breast cancer</option>
-                  <option value="">Cervical cancer</option>
-                  <option value="">Colorectal cancer</option>
-                  <option value="">Esophageal Cancer</option>
-                  <option value="">Kidney cancer</option>
-                  <option value="">Laryngeal cancer</option>
-
-                  <option value="">Leukemia</option>
-                  <option value="">Liver cancer</option>
-                  <option value="">Lung cancer</option>
-                  <option value="">Lymphoma</option>
-                  <option value="">Colorectal cancer</option>
-                  <option value="">Multiple myeloma</option>
-                  <option value="">Oral cancer</option>
-                  <option value="">Ovarian cancer</option>
-                  <option value="">Pancreatic cancer</option>
-                  <option value="">Prostate cancer</option>
-                  <option value="">Skin cancer</option>
-                </select>
-              </div>
-
-            </span>
-                            </div>
-                            <div class="action patient-portal">
-                                <a href="#">
-                                    <!-- <img src="images/action.jpg" alt=""> -->
-                                    <span>
-              <i class="fa fa-user"></i>
-              <h2><el>my<el>VCU PATIENT PORTAL</h2>
-          </span>
-                                </a>
-                            </div>
-                            <div class="action clinical-trial">
-                                <a href="#">
-                                    <!-- <img src="images/action.jpg" alt=""> -->
-                                    <span>
-            <i class="fa fa-search-plus"></i>
-            <h2>Find a clinical trial</h2>
-          </span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-7  spotlight">
+          
+                        <div class="col-md-7 col-sm-7  spotlight">
                             <h3 class="col-title">News Spotlight <span><a href="#">More news</a></span></h3>
                             <img class="img-responsive" src="../build/images/news1B.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
                         </div>
-                        <div class="col-md-4 col-sm-7  spotlight">
+
+                        <div class="col-md-5 col-sm-5 cancer-types">
+                          <h3 class="col-title">Search for your cancer type</h3>
+                                <span>
+                                 <div class="form-group">
+                                  <i class="fa fa-angle-down"></i>
+                                  <select class="form-control" id="" onChange="window.location.replace(this.options[this.selectedIndex].value)">
+                                    <option>Search cancer types ...</span></option>
+                                    <option value="https://www.massey.vcu.edu/cancer/bladder/">Bladder cancer</option>
+                                    <option value="https://www.massey.vcu.edu/cancer/bone/">Bone cancer</option>
+                                    <option value="">Brain and neurological cancer</option>
+                                    <option value="">Breast cancer</option>
+                                    <option value="">Cervical cancer</option>
+                                    <option value="">Colorectal cancer</option>
+                                    <option value="">Esophageal Cancer</option>
+                                    <option value="">Kidney cancer</option>
+                                    <option value="">Laryngeal cancer</option>
+
+                                    <option value="">Leukemia</option>
+                                    <option value="">Liver cancer</option>
+                                    <option value="">Lung cancer</option>
+                                    <option value="">Lymphoma</option>
+                                    <option value="">Colorectal cancer</option>
+                                    <option value="">Multiple myeloma</option>
+                                    <option value="">Oral cancer</option>
+                                    <option value="">Ovarian cancer</option>
+                                    <option value="">Pancreatic cancer</option>
+                                    <option value="">Prostate cancer</option>
+                                    <option value="">Skin cancer</option>
+                                  </select>
+                                </div>
+                              </span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
+
+
+
+                            </div>
+
+                        <!-- <div class="col-md-4 col-sm-7  spotlight">
                             <h3 class="col-title">Patient Stories <span><a href="#">More stories</a></span></h3>
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe width="400" height="225" class="embed-responsive-item" src="https://www.youtube.com/embed/AVoQHW3cNYI"></iframe>
                             </div>
                             <p>Quisque tempus, mi nec imperdiet rhoncus, metus libero porta elit, sed viverra sapien libero sit amet nulla. Etiam accumsan pretium elit eget porta.</p>
-                        </div>
-
-                        <div class="col-md-8 news-events">
+                        </div> -->
+                     </div>
+                        <div class="col-md-12 news-events">
                             <div class="massey-tabs" role="tabpanel">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-pills" role="tablist">
                                     <li role="presentation" class="active"><a href="#events" aria-controls="events" role="tab" data-toggle="tab">Upcoming Events</a></li>
-                                    <li role="presentation"><a href="#news" aria-controls="news" role="tab" data-toggle="tab">News and Advances</a></li>
+                                    <li role="presentation"><a href="#news" aria-controls="news" role="tab" data-toggle="tab">Patient Stories</a></li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content">
@@ -325,10 +384,14 @@
                                                 <div class="news-date"><span class="month">May</span><span class="day">14</span></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61596">Art journaling your cancer experience</a>
                                             </li>
+                                            <li>
+                                                <div class="news-date"><span class="month">May</span><span class="day">13</span></div>
+                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61595">Stonehenge Cure Crew's 5K Fun Run/Walk to benefit Massey</a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div role="tabpanel" class="tab-pane fade" id="news">
-                                        <a href="#">See all news</a>
+                                        <a href="#">See all stories</a>
                                         <ul>
                                             <li>
                                                 <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/geyer-tn.jpg" alt=""></div>
@@ -342,17 +405,25 @@
                                                 <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/geyer-tn.jpg" alt=""></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61596">Cancer Cell Signaling program welcomes Francesco S. Celi as research member</a>
                                             </li>
+                                            <li>
+                                                <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/Untitled-12.jpg" alt=""></div>
+                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61598">Advanced viral gene therapy eradicates prostate cancer in preclinical experiments</a>
+                                            </li>
                                         </ul>
                                     </div> <!-- /.tab-pane -->
                                 </div> <!-- /.tab-content -->
                             </div> <!-- /.massey-tabs -->
                         </div> <!-- /.news-events -->
          
-                    </div>
                 </div>
             </div>
-            </div>
+
             <!-- /container -->
+            
+
+
+
+
             <div class="massey-highlight">
                 <div class="container">
                     <div class="row">

@@ -24,46 +24,63 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <style>
-  .action{
-    margin-bottom: 0;
-    border-radius: 0;
-    transition: all 180ms ease-in-out 0s;
-  }
-  .action:hover{
 
-  }
-  .tab-pane ul li{
-    margin-right: 0;
-  }
-  .spotlights-wrapper{
-    padding: 0;
-  }
-.cancer-types{
+/*.hero{
+    height: 600px;
+    background-image: url(../build/images/exterior1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100%;
+}*/
+
+body{
   background: #fafafa;
 }
-.cancer-types h2{
-  font-family: serif;
-  font-style: italic;
-  margin-bottom: 20px;
+
+.hero-img{
+  max-height: 500px;
+  margin-top: 97px;
+  margin-bottom: 40px;
 }
-.cancer-types:hover{
-  background: #fafafa;
+.secondary-nav .container-fluid{
+  display: table;
 }
-.cancer-types:hover .form-control{
-  background: #fafafa;
+.secondary-nav{
+    border: 1px solid #ddd;
+    top: 97px;
+    z-index: 1;
+    background: #f0f0f0;
 }
-.cancer-types .form-group{
-    position: relative;
-    margin-bottom: 20px;
+.secondary-nav li:hover{
+    background: #e0e0e0;
 }
-.cancer-types .fa{
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-.footer-title{
+.secondary-nav li a{
 
 }
+.util-nav{
+    background: rgba(0, 0, 0, 0) linear-gradient(to left, #f6b700 0%, #f8f8f8 50%) repeat scroll 0 0
+}
+.navbar-default .navbar-nav > li > a{
+    color: #333;
+}
+    
+    .main-nav {
+        background: #f8f8f8;
+    }
+    
+    @media (max-width: 768px) {
+        .util-nav {
+            background: #f8f8f8;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .secondary-nav{
+            top: 0;
+        }
+        .main-content {
+            margin-top: 0;
+        }
+    }
+
 </style>
 
 </head>
@@ -89,7 +106,7 @@
         </div>
     </div>
     <!-- Static navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default util-nav">
         <div class="container">
             <a class="massey-logo" href="#"><img class="hidden-xs" src="../build/images/massey_vert_4color.svg" alt=""><img class="hidden-lg hidden-md hidden-sm" src="../build/images/massey_hz_4color.svg" alt=""></a>
             <div class="navbar-header">
@@ -131,29 +148,29 @@
             <!-- <nav data-spy="affix" data-offset-top="115" class="navbar main-nav hidden-xs"> -->
             <nav class="navbar main-nav hidden-xs yamm" role="navigation">
                 <div class="container">
-                    <!-- <img class="affix-logo" src="../build/images/massey_hz_4color.svg" alt=""> -->
+                   <!--  <img class="affix-logo" src="../build/images/massey_hz_4color.svg" alt=""> -->
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown yamm"><a href="landing.html" class="" data-toggle="">Patient Care</a>
+                            <li class="dropdown yamm"><a href="#" class="" data-toggle="">Patient Care</a>
                                 <ul class="dropdown-menu">
                                     <li class="grid-demo">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
-                                                <div class="col-sm-3 col-md-offset-1 nav-col">
+                                             <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
+                                                <div class="col-md-3 col-md-offset-1 col-sm-4  nav-col">
                                                     <a href="#">Cancer Types</a>
                                                     <a href="#">Find a Doctor</a>
                                                     <a href="#">Treatment Options</a>
                                                     <a href="#">Become a Patient</a>
                                                     <a href="#">Clinical Trials</a>
                                                 </div>
-                                                <div class="col-sm-3 nav-col">
+                                                <div class="col-md-3 col-sm-4 nav-col">
                                                     <a href="#">Support & Resources</a>
                                                     <a href="#">Survivorship</a>
                                                     <a href="#">Clinic Locations</a>
                                                     <a href="#">myVCU Patient Portal</a>
                                                 </div>
-                                                <div class="col-sm-2 nav-col related-links">
+                                                <div class="col-md-2 nav-col related-links hidden-sm">
                                                     <h3 class="title">Related Links</h3>
                                                     <a href="#">link 1</a>
                                                     <a href="#">link 2</a>
@@ -163,23 +180,23 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown yamm"><a href="landing.html" class="" data-toggle="">Research</a>
+                            <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Research</a>
                                 <ul class="dropdown-menu">
                                     <li class="grid-demo">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/dna.jpg" alt=""></div>
-                                                <div class="col-sm-3 col-md-offset-1 nav-col nav-col">
+                                                <div class="col-md-3 col-sm-3 col-md-offset-1 nav-col nav-col">
                                                     <a href="#">Programs</a>
                                                     <a href="#">Member Directory</a>
                                                     <a href="#">Shared Resources</a>
                                                 </div>
-                                                <div class="col-sm-3 nav-col">
+                                                <div class="col-md-3 col-sm-6 nav-col">
                                                     <a href="#">News</a>
                                                     <a href="#">Clinical Research Affiliation Network</a>
                                                     <a href="#">Scientific Review Board</a>
                                                 </div>
-                                                <div class="col-sm-2 nav-col related-links">
+                                                <div class="col-md-2 nav-col related-links hidden-sm">
                                                     <h3 class="title">Related Links</h3>
                                                     <a href="#">link 1</a>
                                                     <a href="#">link 2</a>
@@ -189,19 +206,19 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown yamm"><a href="landing.html" class="dropdown-toggle" data-toggle="dropdown">Education & Training</a>
+                            <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Education & Training</a>
                                 <ul class="dropdown-menu">
                                     <li class="grid-demo">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/education.jpg" alt=""></div>
-                                                <div class="col-sm-6 col-md-offset-1 nav-col nav-col">
+                                                <div class=" col-sm-9 col-md-6 col-md-offset-1 nav-col nav-col">
                                                     <a href="#">Continuing health care professional education</a>
                                                     <a href="#">Health care degree and certificate programs</a>
                                                     <a href="#">Palliative care training</a>
                                                     <a href="#">Pre- and post-doctoral cancer research training</a>
                                                 </div>
-                                                <div class="col-sm-2 nav-col related-links">
+                                                <div class="col-md-2 nav-col related-links hidden-sm">
                                                     <h3 class="title">Related Links</h3>
                                                     <a href="#">link 1</a>
                                                     <a href="#">link 2</a>
@@ -216,239 +233,93 @@
                         <!--/.nav-collapse -->
                         </div>
             </nav>
-            </div>
-            <!--/.nav-bg -->
-            <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                </ol>
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="../build/images/TimSandersonSlider1.jpg" alt="doc">
-                        <div class="carousel-caption">
-                            <!-- <h2>Exicting things are happening at Massey</h2> -->
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../build/images/TimSandersonSlider6.jpg" alt="doc">
-                        <div class="carousel-caption">
-                            <!-- <h2>“That climb was a wonderful gift”</h2> -->
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../build/images/TimSandersonSlider5.jpg" alt="doc">
-                        <div class="carousel-caption">
-                           <!--  <h2>Flowers make me laugh, tee hee</h2> -->
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="../build/images/slide4.jpg" alt="doc">
-                        <div class="carousel-caption">
-                            <h2>"Coming to Massey is a joy"</h2>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end carousel -->
-            
-            </div> <!-- end hero -->
-            
-
-
-            <!-- call to action buttons -->
-            <div class="action-buttons">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-md-3 col-sm-3 action make-appointment">
-                          <a href="#">
-                              <span>
-                                  <i class="fa fa-calendar"></i>
-                                  <h2>Make an appointment</h2>
-                              </span>
-                          </a>
-                      </div>
-                      <div class="col-md-3 col-sm-3 action find-a-physician">
-                          <a href="#">
-                              <span>
-                                <i class="fa fa-user-md"></i>
-                                <h2>Find a physician</h2>
-                              </span>
-                          </a>
-                      </div>
-                      <div class="col-md-3 col-sm-3 action patient-portal">
-                          <a href="#">
-                              <span>
-                            <i class="fa fa-user"></i>
-                            <h2><el>my<el>VCU PATIENT PORTAL</h2>
-                        </span>
-                          </a>
-                      </div>
-                      <div class="col-md-3 col-sm-3 action clinical-trial">
-                          <a href="#">
-                            <span>
-                              <i class="fa fa-search-plus"></i>
-                              <h2>Find a clinical trial</h2>
-                            </span>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            <!-- /call to action buttons -->
-
            
 
+</div>
+            <!--/.nav-bg -->
+    
+            
+<nav data-spy="affix" data-offset-top="212" class="navbar navbar-default secondary-nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#secondary-nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <!-- Brand and toggle get grouped for better mobile display -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="secondary-nav">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Treatment Options</a></li>
+        <li><a href="#">Become a Patient</a></li>
+        <li><a href="#">Clinical Trials</a></li>
+        <li><a href="#">Support & Resources</a></li>
+        <li><a href="#">Survivorship</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.container -->
+</nav>
+             
+
+            <img class="hero-img hidden-xs" src="../build/images/patient-care1.jpg" alt="">
+           
+            </div> <!-- end hero -->
 
 
 
+            
+                <div class="container-fluid border-bottom">
+                  <div class="container">
+                    <div class="row b-pad">
+                        <h2 class="">Patient Care</h2>
 
-
-
-
-
-            <div class="container-fluid spotlights-wrapper border-bottom">
-                <div class="container">
+                        <p class="">Our patients choose VCU Massey Cancer Center for two key reasons: the treatment options we provide and the cancer specialists who provide them.</p>
+                    </div>
                     <div class="row">
-          
-                        <div class="col-md-6 col-sm-6  spotlight">
-                            <h3 class="col-title">News Spotlight <span><a href="#">More news</a></span></h3>
-                            <img class="img-responsive" src="../build/images/news1B.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
-                        </div>
+                      <div class="col-md-4 col-sm-4 col-xs-6 colb-pad card">
+                        <img class="img-responsive" src="http://placehold.it/800x553">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas purus vitae porta pharetra. Sed auctor sollicitudin arcu eu mollis. In vel ligula euismod mi convallis viverra.
+                            <a href="#">More info ...</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 b-pad card">
+                        <img class="img-responsive" src="http://placehold.it/800x553">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas purus vitae porta pharetra. Sed auctor sollicitudin arcu eu mollis. In vel ligula euismod mi convallis viverra.
+                            <a href="#">More info ...</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6 b-pad card">
+                        <img class="img-responsive" src="http://placehold.it/800x553">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas purus vitae porta pharetra. Sed auctor sollicitudin arcu eu mollis. In vel ligula euismod mi convallis viverra.
+                            <a href="#">More info ...</a>
+                        </p>
+                    </div>
 
-                        <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 cancer-types">
-                          <h3 class="col-title">Cancer types</h3>
-                          <h2 class="text-muted">Search for your cancer type</h2>
-                                <span>
-                                 <div class="form-group">
-                                 <!--  <i class="fa fa-angle-down"></i> -->
-                                  <select class="form-control" id="" onChange="window.location.replace(this.options[this.selectedIndex].value)">
-                                    <option>Cancer types ...</option>
-                                    <option value="https://www.massey.vcu.edu/cancer/bladder/">Bladder cancer</option>
-                                    <option value="https://www.massey.vcu.edu/cancer/bone/">Bone cancer</option>
-                                    <option value="">Brain and neurological cancer</option>
-                                    <option value="">Breast cancer</option>
-                                    <option value="">Cervical cancer</option>
-                                    <option value="">Colorectal cancer</option>
-                                    <option value="">Esophageal Cancer</option>
-                                    <option value="">Kidney cancer</option>
-                                    <option value="">Laryngeal cancer</option>
+                    <div class="col-md-4 col-sm-4 col-xs-6 b-pad card">
+                        <img class="img-responsive" src="http://placehold.it/800x553">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas purus vitae porta pharetra. Sed auctor sollicitudin arcu eu mollis. In vel ligula euismod mi convallis viverra.
+                            <a href="#">More info ...</a>
+                        </p>
+                    </div>
+                    <div class="col-md-8 col-sm-8 b-pad card">
+                        <img class="img-responsive" src="http://placehold.it/800x265">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas purus vitae porta pharetra. Sed auctor sollicitudin arcu eu mollis. In vel ligula euismod mi convallis viverra.
+                            <a href="#">More info ...</a>
+                        </p>
+                    </div>
+                    </div>
 
-                                    <option value="">Leukemia</option>
-                                    <option value="">Liver cancer</option>
-                                    <option value="">Lung cancer</option>
-                                    <option value="">Lymphoma</option>
-                                    <option value="">Colorectal cancer</option>
-                                    <option value="">Multiple myeloma</option>
-                                    <option value="">Oral cancer</option>
-                                    <option value="">Ovarian cancer</option>
-                                    <option value="">Pancreatic cancer</option>
-                                    <option value="">Prostate cancer</option>
-                                    <option value="">Skin cancer</option>
-                                  </select>
-                                </div>
-                              </span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
-
-
-
-                            </div>
-
-                        <!-- <div class="col-md-4 col-sm-7  spotlight">
-                            <h3 class="col-title">Patient Stories <span><a href="#">More stories</a></span></h3>
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe width="400" height="225" class="embed-responsive-item" src="https://www.youtube.com/embed/AVoQHW3cNYI"></iframe>
-                            </div>
-                            <p>Quisque tempus, mi nec imperdiet rhoncus, metus libero porta elit, sed viverra sapien libero sit amet nulla. Etiam accumsan pretium elit eget porta.</p>
-                        </div> -->
-                     </div>
-                        <div class="col-md-12 news-events">
-                            <div class="massey-tabs" role="tabpanel">
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-pills" role="tablist">
-                                    <li role="presentation" class="active"><a href="#events" aria-controls="events" role="tab" data-toggle="tab">Upcoming Events</a></li>
-                                    <li role="presentation"><a href="#news" aria-controls="news" role="tab" data-toggle="tab">Patient Stories</a></li>
-                                </ul>
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane fade in active" id="events">
-                                        <a href="#">See all events</a>
-                                        <ul>
-                                            <li class="col-md-3 col-sm-4">
-                                                <div class="news-date"><span class="month">May</span><span class="day">13</span></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61595">Stonehenge Cure Crew's 5K Fun Run/Walk to benefit Massey</a>
-                                            </li>
-                                            <li class="col-md-3 col-sm-4"> 
-                                                <div class="news-date"><span class="month">May</span><span class="day">14</span></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61598">21st Annual Women & Wellness Forum Series to benefit VCU Massey Cancer Center</a>
-                                            </li>
-                                            <li class="col-md-3 col-sm-4">
-                                                <div class="news-date"><span class="month">May</span><span class="day">14</span></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61596">Art journaling your cancer experience</a>
-                                            </li>
-                                            <li class="col-md-3 hidden-sm">
-                                                <div class="news-date"><span class="month">May</span><span class="day">13</span></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61595">Stonehenge Cure Crew's 5K Fun Run/Walk to benefit Massey</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="news">
-                                        <a href="#">See all stories</a>
-                                        <ul>
-                                            <li class="col-md-3 col-sm-4">
-                                                <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/geyer-tn.jpg" alt=""></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61595">The $125 billion question: how will the ACA affect cancer survivors?</a>
-                                            </li>
-                                            <li class="col-md-3 col-sm-4">
-                                                <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/Untitled-12.jpg" alt=""></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61598">Advanced viral gene therapy eradicates prostate cancer in preclinical experiments</a>
-                                            </li>
-                                            <li class="col-md-3 col-sm-4">
-                                                <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/geyer-tn.jpg" alt=""></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61596">Cancer Cell Signaling program welcomes Francesco S. Celi as research member</a>
-                                            </li>
-                                            <li class="col-md-3 hidden-sm">
-                                                <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/Untitled-12.jpg" alt=""></div>
-                                                <a href="http://events.vcu.edu/detailEvent.asp?ID=61598">Advanced viral gene therapy eradicates prostate cancer in preclinical experiments</a>
-                                            </li>
-                                        </ul>
-                                    </div> <!-- /.tab-pane -->
-                                </div> <!-- /.tab-content -->
-                            </div> <!-- /.massey-tabs -->
-                        </div> <!-- /.news-events -->
-         
-                </div>
-            </div>
-
-            <!-- /container -->
+                  </div><!-- /container -->
+                </div><!-- /container-fluid -->
             
 
 
 
-
-            <div class="massey-highlight">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                          <img class="img-responsive best-highlight-img center-block" src="../build/images/besthospitals.png" alt="">
-                          <p>Quisque tempus, mi nec imperdiet rhoncus, metus libero porta elit, sed viverra sapien libero sit amet nulla. Etiam accumsan pretium elit eget porta.</p>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                          <img class="img-responsive nci-highlight-img center-block" src="../build/images/ncicc.png" alt="NCI-CC">
-                          <p>Quisque tempus, mi nec imperdiet rhoncus, metus libero porta elit, sed viverra sapien libero sit amet nulla. Etiam accumsan pretium elit eget porta.</p>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                          <img class="img-responsive massey-highlight-img center-block" src="../build/images/massey_vert_4color.svg" alt="">
-                          <p>Quisque tempus, mi nec imperdiet rhoncus, metus libero porta elit, sed viverra sapien libero sit amet nulla. Etiam accumsan pretium elit eget porta.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
           <div class="massey-testamonials">
             <div class="container">
                 <div class="row">
@@ -589,6 +460,11 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script src="../build/vendor/bootstrap.js"></script>
             <script src="../build/js/all.js"></script>
+            <script>
+            $('.secondary-nav').affix({
+              offset: 
+            })
+            </script>
 </body>
 
-</html>
+</ht800553

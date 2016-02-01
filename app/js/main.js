@@ -26,7 +26,7 @@ $(document).ready(function() {
      }, 
 
      function () {
-      $('.dropdown-menu', this).fadeTo("fast", 0).css({"display":"none"})
+      $('.dropdown-menu', this).fadeTo("slow", 0).css({"display":"none"})
       $('.nav-bg').css({"height":"0px"});
      }
   );

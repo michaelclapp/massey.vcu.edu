@@ -46,6 +46,9 @@
   font-style: italic;
   margin-bottom: 20px;
 }
+.cancer-types .form-control{
+  -moz-appearance: none;
+}
 .cancer-types:hover{
   background: #fafafa;
 }
@@ -61,9 +64,7 @@
   right: 20px;
   top: 10px;
 }
-.footer-title{
 
-}
 </style>
 
 </head>
@@ -131,10 +132,10 @@
             <!-- <nav data-spy="affix" data-offset-top="115" class="navbar main-nav hidden-xs"> -->
             <nav class="navbar main-nav hidden-xs yamm" role="navigation">
                 <div class="container">
-                    <!-- <img class="affix-logo" src="../build/images/massey_hz_4color.svg" alt=""> -->
+                    <img class="affix-logo" src="../build/images/massey_hz_4color.svg" alt="">
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown yamm"><a href="landing.html" class="" data-toggle="">Patient Care</a>
+                            <li class="dropdown yamm"><a href="#" class="" data-toggle="">Patient Care</a>
                                 <ul class="dropdown-menu">
                                     <li class="grid-demo">
                                         <div class="container">
@@ -163,7 +164,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown yamm"><a href="landing.html" class="" data-toggle="">Research</a>
+                            <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Research</a>
                                 <ul class="dropdown-menu">
                                     <li class="grid-demo">
                                         <div class="container">
@@ -189,7 +190,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown yamm"><a href="landing.html" class="dropdown-toggle" data-toggle="dropdown">Education & Training</a>
+                            <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Education & Training</a>
                                 <ul class="dropdown-menu">
                                     <li class="grid-demo">
                                         <div class="container">
@@ -229,21 +230,21 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="../build/images/TimSandersonSlider1.jpg" alt="doc">
+                        <img src="../build/images/slide1.jpg" alt="doc">
                         <div class="carousel-caption">
-                            <!-- <h2>Exicting things are happening at Massey</h2> -->
+                            <h2>Exicting things are happening at Massey</h2>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../build/images/TimSandersonSlider6.jpg" alt="doc">
+                        <img src="../build/images/slide2.jpg" alt="doc">
                         <div class="carousel-caption">
-                            <!-- <h2>“That climb was a wonderful gift”</h2> -->
+                            <h2>“That climb was a wonderful gift”</h2>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../build/images/TimSandersonSlider5.jpg" alt="doc">
+                        <img src="../build/images/slide3.jpg" alt="doc">
                         <div class="carousel-caption">
-                           <!--  <h2>Flowers make me laugh, tee hee</h2> -->
+                            <h2>Flowers make me laugh, tee hee</h2>
                         </div>
                     </div>
                     <div class="item">
@@ -325,7 +326,7 @@
                           <h2 class="text-muted">Search for your cancer type</h2>
                                 <span>
                                  <div class="form-group">
-                                 <!--  <i class="fa fa-angle-down"></i> -->
+                                  <i class="fa fa-angle-down"></i>
                                   <select class="form-control" id="" onChange="window.location.replace(this.options[this.selectedIndex].value)">
                                     <option>Cancer types ...</option>
                                     <option value="https://www.massey.vcu.edu/cancer/bladder/">Bladder cancer</option>
@@ -355,19 +356,20 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec ultricies orci, eget accumsan quam. Ut quis condimentum dui. Aliquam faucibus libero aliquam dui dignissim convallis.</p>
 
-
-
                             </div>
+                     </div>
+                        
+                      <div class="row">
 
-                        <!-- <div class="col-md-4 col-sm-7  spotlight">
+                           <div class="col-md-6 col-sm-7  spotlight">
                             <h3 class="col-title">Patient Stories <span><a href="#">More stories</a></span></h3>
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe width="400" height="225" class="embed-responsive-item" src="https://www.youtube.com/embed/AVoQHW3cNYI"></iframe>
                             </div>
                             <p>Quisque tempus, mi nec imperdiet rhoncus, metus libero porta elit, sed viverra sapien libero sit amet nulla. Etiam accumsan pretium elit eget porta.</p>
-                        </div> -->
-                     </div>
-                        <div class="col-md-12 news-events">
+                        </div> 
+
+                        <div class="col-md-5 col-md-offset-1 news-events">
                             <div class="massey-tabs" role="tabpanel">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-pills" role="tablist">
@@ -379,19 +381,19 @@
                                     <div role="tabpanel" class="tab-pane fade in active" id="events">
                                         <a href="#">See all events</a>
                                         <ul>
-                                            <li class="col-md-3 col-sm-4">
+                                            <li class="">
                                                 <div class="news-date"><span class="month">May</span><span class="day">13</span></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61595">Stonehenge Cure Crew's 5K Fun Run/Walk to benefit Massey</a>
                                             </li>
-                                            <li class="col-md-3 col-sm-4"> 
+                                            <li class=""> 
                                                 <div class="news-date"><span class="month">May</span><span class="day">14</span></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61598">21st Annual Women & Wellness Forum Series to benefit VCU Massey Cancer Center</a>
                                             </li>
-                                            <li class="col-md-3 col-sm-4">
+                                            <li class="">
                                                 <div class="news-date"><span class="month">May</span><span class="day">14</span></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61596">Art journaling your cancer experience</a>
                                             </li>
-                                            <li class="col-md-3 hidden-sm">
+                                            <li class="m">
                                                 <div class="news-date"><span class="month">May</span><span class="day">13</span></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61595">Stonehenge Cure Crew's 5K Fun Run/Walk to benefit Massey</a>
                                             </li>
@@ -400,19 +402,19 @@
                                     <div role="tabpanel" class="tab-pane fade" id="news">
                                         <a href="#">See all stories</a>
                                         <ul>
-                                            <li class="col-md-3 col-sm-4">
+                                            <li class="">
                                                 <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/geyer-tn.jpg" alt=""></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61595">The $125 billion question: how will the ACA affect cancer survivors?</a>
                                             </li>
-                                            <li class="col-md-3 col-sm-4">
+                                            <li class="">
                                                 <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/Untitled-12.jpg" alt=""></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61598">Advanced viral gene therapy eradicates prostate cancer in preclinical experiments</a>
                                             </li>
-                                            <li class="col-md-3 col-sm-4">
+                                            <li class="">
                                                 <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/geyer-tn.jpg" alt=""></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61596">Cancer Cell Signaling program welcomes Francesco S. Celi as research member</a>
                                             </li>
-                                            <li class="col-md-3 hidden-sm">
+                                            <li class="">
                                                 <div class="news-date"><img src="http://massey.vcu.edu/media/massey-cancer-center/content-assets/images/home-page-thumbnails/news-and-advances/Untitled-12.jpg" alt=""></div>
                                                 <a href="http://events.vcu.edu/detailEvent.asp?ID=61598">Advanced viral gene therapy eradicates prostate cancer in preclinical experiments</a>
                                             </li>
@@ -421,7 +423,7 @@
                                 </div> <!-- /.tab-content -->
                             </div> <!-- /.massey-tabs -->
                         </div> <!-- /.news-events -->
-         
+                      </div> <!-- /row -->
                 </div>
             </div>
 
@@ -499,7 +501,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3">
                             <ul>
-                                <li><a class="footer-title" href="#">About Massey</a></li>
+                                <li><a href="#">About Massey</a></li>
                                 <li><a href="#">Locations</a></li>
                                 <li><a href="#">Careers</a></li>
                                 <li><a href="#">Newsroom</a></li>
@@ -509,7 +511,7 @@
                         </div>
                         <div class="col-md-3 col-sm-3">
                             <ul>
-                                <li><a class="footer-title" href="#">Patient & Cancer Information</a></li>
+                                <li><a href="#">Patient & Cancer Information</a></li>
                                 <li><a href="#">Cancer care and support</a></li>
                                 <li><a href="#">Appointments & Referrals</a></li>
                                 <li><a href="#">Clinical Trials</a></li>
@@ -521,7 +523,7 @@
                         </div>
                         <div class="col-md-3 col-sm-3">
                             <ul>
-                                <li><a class="footer-title" href="#">Research</a></li>
+                                <li><a href="#">Research</a></li>
                                 <li><a href="#">Clinical Research Affiliation Network</a></li>
                                 <li><a href="#">Member Directory</a></li>
                                 <li><a href="#">Programs</a></li>
@@ -534,7 +536,7 @@
                         </div>
                         <div class="col-md-3 col-sm-3">
                             <ul>
-                                <li><a class="footer-title" href="#">Education & Training</a></li>
+                                <li><a href="#">Education & Training</a></li>
                                 <li><a href="#">Community Outreach & Education</a></li>
                                 <li><a href="#">Continuing and Professional Education</a></li>
                                 <li><a href="#">Degrees & Certificates</a></li>

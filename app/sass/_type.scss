@@ -1,3 +1,44 @@
 /*----------------------------------------------------------/
 // TYPE SETTINGS
 /*----------------------------------------------------------*/
+
+a{
+    color: $blue;
+}
+
+.landing-title {
+    font-size: 1.1em;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.page-title{
+    font-size: 42px;
+}
+
+.lead {
+    font-family: serif;
+    font-size: 30px;
+    margin: 20px auto 60px;
+    max-width: 85%;
+    text-align: center;
+
+}
+
+.facts{
+	padding: 0;
+	border-top: 1px solid #eee;
+	text-align: center;
+}
+
+.facts li {
+    display: inline-block;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.facts ~ p {
+    margin-bottom: 40px;
+    text-align: center;
+}

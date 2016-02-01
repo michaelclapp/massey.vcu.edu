@@ -13,9 +13,19 @@ a{
 }
 
 
+.blue{
+	color: #328CAD !important;
+}
 
+.main-content{
+	margin-top: 97px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
 
-
+.b-pad{
+	padding-bottom: 40px;
+}
 /*----------------------------------------------------------*/
 // HOME CONTENT
 /*----------------------------------------------------------*/
@@ -172,7 +182,7 @@ a{
     border-radius: 0;
     box-shadow: none;
     color: #fff;
-    -moz-appearance: none;
+    // -moz-appearance: none;
     option{
 	    background: none repeat scroll 0 0 #fafafa;
 	    border-bottom: 1px solid #eee;
@@ -189,6 +199,7 @@ a{
 }
 .border-bottom{
 	border-bottom: 1px solid #ccc;
+	padding-bottom: 40px;
 }
 
 // .action .fa{
@@ -253,7 +264,7 @@ a{
 	    float: left;
 	    list-style: outside none none;
     	margin-right: 10px;
-	    width: 32%;
+	    //width: 32%;
 	    box-sizing: border-box;
 	    @media (max-width: $small) {
 			width: 100%;
@@ -332,6 +343,25 @@ a{
 
 
 
+/*----------------------------------------------------------*
+* LISTS
+/*----------------------------------------------------------*/
+
+.list li {
+    list-style: outside none none;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.list li::before {
+    content: "■";
+    font-size: 16px;
+    left: -24px;
+    position: absolute;
+    top: -3px;
+    color: $yellow;
+}
+
 
 /*----------------------------------------------------------*
 * testing
@@ -343,19 +373,38 @@ body{
 	background-attachment: fixed;
 }
 
-.navbar.main-nav.affix {
-    margin-top: 0;
-    padding-top: 0;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, .95);
-    border-bottom: 1px solid #ccc;
+// .navbar.main-nav.affix {
+//     margin-top: 0;
+//     padding-top: 0;
+//     top: 0;
+//     width: 100%;
+//     background: rgba(255, 255, 255, .95);
+//     border-bottom: 1px solid #ccc;
+// }
+// .affix-logo {
+// 	display: none;
+// }
+// .affix .affix-logo{
+// 	    display: block;
+// 	    position: absolute;
+// 	    width: 15%;
+// }
+
+.secondary-nav.affix{
+	top: 0 !important;
+	width: 100%;
 }
-.affix-logo {
-	display: none;
+
+.cancer-types .form-group select option span::before{
+	content: "\f107";
+	font-family: FontAwesome;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 20px;
 }
-.affix .affix-logo{
-	    display: block;
-	    position: absolute;
-	    width: 15%;
+
+.hero-img{
+	width: 100%;
+	height: auto;
 }

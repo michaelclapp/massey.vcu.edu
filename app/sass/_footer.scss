@@ -13,11 +13,19 @@
 	}
 	a{
 		font-weight: bold;
-		padding: 3px 0;
+		padding: 3px 0 3px 10px;
 		display: block;
 		&:hover{
 			color: $blue;
 		}
+	}
+}
+
+.footer-title{
+	background: #eee;
+	color: #333;
+	&:hover{
+		text-decoration: none;
 	}
 }
 

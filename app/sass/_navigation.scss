@@ -23,7 +23,7 @@
 	border: 0;
 }
 .navbar-toggle{
-	padding: 15px 10px;
+	padding: 14px 10px;
 }
 .navbar-default .navbar-toggle{
 	border: none;
@@ -149,7 +149,7 @@
 		height: 44px;
 	    left: 50%;
 	    margin-left: -60px;
-	    top: -1px;
+	    top: -7px;
 	    width: 120px;
 	}
 
@@ -174,11 +174,12 @@
 .main-nav .dropdown-menu a{
 	color: $blue;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 18px;
 	display: block;
 	line-height: 40px !important;
+	font-family: sans-serif;
 	&:hover{
-		text-decoration: underline;
+		color: #777;
 	}
 }
 
@@ -201,7 +202,16 @@
 }
 .main-nav .dropdown-menu .related-links a{
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #000;
+	color: #777;
 	font-size: 16px;
 	line-height: 30px !important;
+}
+
+/*----------------------------------------------------------*
+* SECONDARY NAV
+/*----------------------------------------------------------*/
+
+.secondary-nav .navbar-nav a {
+    color: #777 !important;
+    font-weight: 500;
 }

@@ -1,0 +1,86 @@
+/*----------------------------------------------------------*
+* Landing page styles
+/*----------------------------------------------------------*/
+
+body{
+  background: #fafafa;
+}
+
+.hero-img{
+  max-height: 500px;
+  margin-top: 97px;
+}
+.secondary-nav .container-fluid{
+  display: table;
+}
+.secondary-nav{
+    border: 1px solid #ddd;
+    top: 97px;
+    z-index: 1;
+    background: #f0f0f0;
+}
+.secondary-nav li:hover{
+    background: #e0e0e0;
+}
+.secondary-nav li a{
+
+}
+.util-nav{
+    background: rgba(0, 0, 0, 0) linear-gradient(to left, #f6b700 0%, #f8f8f8 50%) repeat scroll 0 0;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #333;
+}
+    
+.main-nav {
+    background: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+    .util-nav {
+        background: #f8f8f8;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .secondary-nav{
+        top: 0;
+    }
+    .main-content {
+        margin-top: 0;
+    }
+}
+
+.card {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.card a {
+    position: absolute;
+    right: 15px;
+    left: 15px;
+    padding: 15px 0 15px 15px;
+    background: #f8b801;
+    color: #fff;
+}
+
+.card a:hover {
+    text-decoration: none;
+    opacity: .9;
+}
+
+.card a p {
+    margin: 0;
+    padding: 0;
+}
+
+.card a p i {
+    float: right;
+    padding-right: 15px;
+    padding-top: 3px;
+}
+
+@media (min-width: 991px) {
+    .treatment-card {
+        clear: left;
+    }
+}

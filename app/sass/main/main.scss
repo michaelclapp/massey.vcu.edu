@@ -26,6 +26,15 @@ a{
 .b-pad{
 	padding-bottom: 40px;
 }
+
+.t-pad{
+	padding-top: 40px;
+}
+
+.pad{
+	padding: 40px;
+}
+
 /*----------------------------------------------------------*/
 // HOME CONTENT
 /*----------------------------------------------------------*/
@@ -45,7 +54,7 @@ a{
 
 .spotlights-wrapper{
 	background: #fafafa;
-	padding-top: 25px;
+	padding: 0;
 	.row{
 		margin-top: 20px;
 	}
@@ -76,11 +85,12 @@ a{
 
 .action{
 	color: #fff;
-	margin-bottom: 20px;
 	position: relative;
 	height: 85px;
 	background: $blue;
-    border-radius: 2px;
+    margin-bottom: 0;
+    border-radius: 0;
+    transition: all 180ms ease-in-out 0s;
 	a{
 		color: #fff;
 		&:hover{
@@ -141,17 +151,10 @@ a{
 		background: lighten(#60b6d4, 5%);
 	}
 }
-.cancer-types{
-	background: #778c9a;
-	//border-bottom: 5px solid darken(#778c9a, 10%);
-	cursor: pointer;
-	&:hover{
-		background: lighten(#778c9a, 5%);
-		.form-control{
-			background: lighten(#778c9a, 5%);
-			cursor: pointer;
-		}
-	}
+.cancer-types h2{
+  font-family: serif;
+  font-style: italic;
+  margin-bottom: 20px;
 }
 .patient-portal{
 	background: #b2bb1c;
@@ -194,6 +197,10 @@ a{
     }
 }
 
+ .spotlights-wrapper{
+    padding: 0;
+  }
+
 .border-top{
 	border-top: 1px solid #ccc;
 }
@@ -201,21 +208,6 @@ a{
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 40px;
 }
-
-// .action .fa{
-// 		font-size: 70px;
-// 		width: 100%;
-// 		text-align: center;
-// 	}
-
-// .action h2{
-// 		left: 0;
-// 		width: 80%;
-// 		margin: 10px auto;
-// 		text-align: center;
-// 		text-transform: uppercase;
-// 		font-size: 24px;
-// 	}
 
 
 /*----------------------------------------------------------*
@@ -263,8 +255,7 @@ a{
 	li {
 	    float: left;
 	    list-style: outside none none;
-    	margin-right: 10px;
-	    //width: 32%;
+    	margin-right: 0px;
 	    box-sizing: border-box;
 	    @media (max-width: $small) {
 			width: 100%;
@@ -325,6 +316,10 @@ a{
     top: 50px;
 }
 
+.tab-pane ul li{
+    margin-right: 0;
+  }
+
 
 /*----------------------------------------------------------*
 * MASSEY HIGHTLIGHT
@@ -364,6 +359,47 @@ a{
 
 
 /*----------------------------------------------------------*
+* Cancer types block
+/*----------------------------------------------------------*/
+
+.cancer-types .form-group select option span::before{
+	content: "\f107";
+	font-family: FontAwesome;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	
+}
+
+.cancer-types{
+  background: #fafafa;
+}
+.cancer-types h2{
+  font-family: serif;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.cancer-types:hover{
+  background: #fafafa;
+}
+.cancer-types:hover .form-control{
+  background: #fafafa;
+}
+.cancer-types .form-group{
+    position: relative;
+    margin-bottom: 20px;
+}
+.cancer-types .fa{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+
+
+
+/*----------------------------------------------------------*
 * testing
 /*----------------------------------------------------------*/
 
@@ -373,36 +409,11 @@ body{
 	background-attachment: fixed;
 }
 
-// .navbar.main-nav.affix {
-//     margin-top: 0;
-//     padding-top: 0;
-//     top: 0;
-//     width: 100%;
-//     background: rgba(255, 255, 255, .95);
-//     border-bottom: 1px solid #ccc;
-// }
-// .affix-logo {
-// 	display: none;
-// }
-// .affix .affix-logo{
-// 	    display: block;
-// 	    position: absolute;
-// 	    width: 15%;
-// }
-
 .secondary-nav.affix{
 	top: 0 !important;
 	width: 100%;
 }
 
-.cancer-types .form-group select option span::before{
-	content: "\f107";
-	font-family: FontAwesome;
-	display: inline-block;
-	position: absolute;
-	top: 10px;
-	right: 20px;
-}
 
 .hero-img{
 	width: 100%;

@@ -28,22 +28,41 @@ var onError = function (err) {
 };
 
 // compile, concatinate & minify sass
-gulp.task('css', function() {
-    var styles = gulp.src(config.appDir + '/sass/*.scss')
+gulp.task('main-css', function() {
+    var mainStyles = gulp.src(config.appDir + '/sass/main/*.scss')
     	.pipe(plumber({
       		errorHandler: onError
     	}))
     	.pipe(sourcemaps.init())
     	.pipe(sass())
 
-    return es.merge(styles)
-    .pipe(concat('all.css'))
+    return es.merge(mainStyles)
+    .pipe(concat('main.css'))
   	.pipe(gulp.dest(config.buildDir + '/css'))
   	.pipe(minifyCss({compatibility: 'ie8'}))
-  	.pipe(rename('all.min.css'))
+  	.pipe(rename('main.min.css'))
   	.pipe(sourcemaps.write('.'))
   	.pipe(plumber.stop())
   	.pipe(gulp.dest(config.buildDir + '/css'))
+});
+
+// compile, concatinate & minify sass
+gulp.task('landing-css', function() {
+    var landingStyles = gulp.src(config.appDir + '/sass/landing/*.scss')
+      .pipe(plumber({
+          errorHandler: onError
+      }))
+      .pipe(sourcemaps.init())
+      .pipe(sass())
+
+    return es.merge(landingStyles)
+    .pipe(concat('landing.css'))
+    .pipe(gulp.dest(config.buildDir + '/css'))
+    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(rename('landing.min.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(plumber.stop())
+    .pipe(gulp.dest(config.buildDir + '/css'))
 });
 
 // concatinate & minify js
@@ -76,10 +95,11 @@ gulp.task('images', function() {
 // watch files
 gulp.task('watch', function() {
     gulp.watch(config.appDir + '/js/*.js', ['scripts'])
-    gulp.watch(config.appDir + '/sass/*.scss', ['css'])
+    gulp.watch(config.appDir + '/sass/main/*.scss', ['main-css'])
+    gulp.watch(config.appDir + '/sass/landing/*.scss', ['landing-css'])
     gulp.watch(config.appDir + '/images/**/*', ['images'])
 });
 
 
 // setup default task
-gulp.task('default', ['css', 'vendor', 'images', 'watch']);
+gulp.task('default', ['main-css', 'landing-css', 'vendor', 'images', 'watch']);

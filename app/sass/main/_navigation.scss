@@ -124,11 +124,14 @@
 	}
 }
 
-.main-nav .nav > li > a:hover, .nav > li > a:focus {
+.main-nav .nav > li:hover > a {
     background: inherit;
     color: $blue;
 }
 
+.main-nav .nav > li > a:focus{
+	background: transparent;
+}
 .yamm .nav .open > a,.yamm .nav .open >.yamm a:hover,.yamm .nav .open > a:focus{
 	background-color: transparent !important;
 }
@@ -207,6 +210,25 @@
 	line-height: 30px !important;
 }
 
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+  position: static;
+}
+.yamm .container {
+  position: relative;
+}
+.yamm .dropdown-menu {
+  left: auto;
+}
+.yamm .yamm-content {
+  padding: 20px 30px;
+}
+.yamm .dropdown.yamm-fw .dropdown-menu {
+  left: 0;
+  right: 0;
+}
 /*----------------------------------------------------------*
 * SECONDARY NAV
 /*----------------------------------------------------------*/

@@ -1,201 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="VCU Massey Cancer Center">
-    <link rel="icon" href="../../favicon.ico">
-
+    <meta name="Description" content="VCU Massey Cancer Center" />
+    <meta name="Keywords" content="vcu, massey cancer center" />
+    <meta name="Author" content="VCU Massey Cancer Center">
     <title>VCU Massey Cancer Center</title>
-
     <!-- Bootstrap core CSS -->
     <link href="../build/vendor/bootstrap.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="../build/css/all.css" rel="stylesheet">
-
-       <!-- Yamm css -->
-    <link href="../build/vendor/yamm.css" rel="stylesheet">
-
+    <!-- Yamm css -->
+   <!-- <link href="../build/vendor/yamm.css" rel="stylesheet"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
 
-  </head>
+<body>
+    <div id="vcuIdentityWrapper">
+        <header id="vcuIdentity">
+            <hgroup>
+                <h1>
+                  <a class="logo" href="http://www.vcu.edu" target="_blank" title="Virginia Commonwealth University">Virginia Commonwealth University</a>
+                  <a class="hidden-lg hidden-md hidden-sm searchLink" href="#"><span aria-hidden="true" class="fa fa-search"></span></a>
+                </h1>
+                <h2>
+        <a href="http://www.makeitreal.vcu.edu" target="_blank" title="VCU Make it real.">Make it real.</a>
+      </h2>
+            </hgroup>
+        </header>
+    </div>
 
-  <body>
-<div id="vcuIdentityWrapper">
-	<header id="vcuIdentity">
-		<hgroup>
-			<h1>
-				<a class="logo" href="http://www.vcu.edu" target="_blank" title="Virginia Commonwealth University">Virginia Commonwealth University</a>
-        <a class="hidden-lg hidden-md hidden-sm searchLink" href="#"><span aria-hidden="true" class="fa fa-search"></span></a>
-			</h1>
-			<h2>
-				<a href="http://www.makeitreal.vcu.edu" target="_blank" title="VCU Make it real.">Make it real.</a>
-			</h2>
-		</hgroup>
-	</header>
-</div>
-<div class="searchWrap">
-<div class="input-group input-group-lg right-inner-addon searchbox"> 
-  <span class="input-group-addon"><i class="fa fa-search"></i></span>
-    <input type="search" class="form-control" placeholder="Search our site ..." />
-</div>
-</div>
+    <div class="searchWrap">
+      <form id="sitesearch" name="gs" method="get"  action="http://search.vcu.edu/search">
+        <label class="sr-only" for="massey-search">Search</label>
+          <div class="input-group input-group-lg right-inner-addon searchbox">
+            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            <input id="massey-search" type="text" autocomplete="off" name="q" class="form-control" placeholder="Search our site ..." onfocus="this.value=''" />
+          </div>
+        <div>
+        </div>
+        <input type="hidden" name="query" value="" />
+        <input type="hidden" name="proxystylesheet" value="massey" />
+        <input type="hidden" name="output" value="xml_no_dtd" />
+        <input type="hidden" name="client" value="massey"/>
+        <input type="hidden" name="sitesearch" value="www.massey.vcu.edu" />
+        <input type="hidden" name="sort" value="date:D:L:d1" />
+        <input type="hidden" name="entqr" value="3" />
+        <input type="hidden" name="oe" value="UTF-8" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="hidden" name="ud" value="1" />
+        <input type="hidden" name="site" value="massey" />
+      </form>
+    </div>
+
     <!-- Static navbar -->
     <nav class="navbar navbar-default">
-      <div class="container">
-          <a class="massey-logo" href="#"><img class="hidden-xs" src="../build/images/massey_vert_4color.svg" alt=""><img class="hidden-lg hidden-md hidden-sm" src="../build/images/massey_hz_4color.svg" alt=""></a>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="container">
+            <a class="massey-logo" href="#"><img class="hidden-xs" src="../build/images/massey_vert_4color.svg" alt=""><img class="hidden-lg hidden-md hidden-sm" src="../build/images/massey_hz_4color.svg" alt=""></a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class=""><a href="#">About</a></li>
+                    <li class=""><a href="#">Appointments</a></li>
+                    <li class=""><a href="#">Give</a></li>
+                    <li class=""><a href="#">Contact</a></li>
+                    <li class="hidden-xs"><a class="searchLink" href="#"><span aria-hidden="true" class="fa fa-search"></span></a></li>
+                </ul>
+                <!-- mobile nav -->
+                <ul class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
+                    <li><a href="#">Patient Care</a></li>
+                    <li><a href="#">Research</span></a></li>
+                    <li><a href="#">Education & Training</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li class=""><a href="#">About</a></li>
+                          <li class=""><a href="#">Appointments</a></li>
+                          <li class=""><a href="#">Give</a></li>
+                          <li class=""><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right hidden-xs">
-            <li class=""><a href="#">About Massey</a></li>
-            <li class=""><a href="#">Careers at Massey</a></li>
-            <li><a href="#about">Support Massey</a></li>
-            <li class=""><a href="#">Intranet</a></li>
-             <li class="hidden-xs"><a class="searchLink" href="#"><span aria-hidden="true" class="fa fa-search"></span></a></li>
-          </ul>
-          
-          <!-- mobile nav -->
-          <ul class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
-            <li><a href="#">Patient Care</a></li>
-            <li><a href="#">Research</span></a></li>
-            <li><a href="#">Education & Training</a></li>
-
-            <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">About Massey</a></li>
-                <li><a href="#">Careers at Massey</a></li>
-                <li><a href="#">Support Massey</a></li>
-                <li><a href="#">Intranet</a></li>
-              </ul>
-            </li>
-          </ul>
-
-        </div><!--/.nav-collapse -->
-
-      
-
-      </div>
     </nav>
-
-<div class="hero">
-  <div class="nav-bg">
-  <!-- <nav data-spy="affix" data-offset-top="115" class="navbar main-nav hidden-xs"> -->
-  <nav class="navbar main-nav hidden-xs yamm" role="navigation"> 
-    <div class="container">
-      <img class="affix-logo" src="../build/images/massey_hz_4color.svg" alt="">
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown yamm"><a href="#" class="" data-toggle="">Patient Care</a>
-            <ul class="dropdown-menu">
-               <li class="grid-demo">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
-                      <div class="col-sm-3 col-md-offset-1 nav-col">
-                        <a href="#">Cancer Types</a>
-                        <a href="#">Find a Doctor</a>
-                        <a href="#">Treatment Options</a>
-                        <a href="#">Become a Patient</a>
-                        <a href="#">Clinical Trials</a>
-                      </div>
-                      <div class="col-sm-3 nav-col">
-                        <a href="#">Support & Resources</a>
-                        <a href="#">Survivorship</a>
-                        <a href="#">Clinic Locations</a>
-                        <a href="#">myVCU Patient Portal</a>
-
-                      </div>
-                      <div class="col-sm-2 nav-col related-links">
-                        <h3 class="title">Related Links</h3>
-
-                        <a href="#">link 1</a>
-                        <a href="#">link 2</a>
-                        <a href="#">link 3</a>
-                      </div>
-                    </div>
-                  </li>
-             </ul>
-          </li>
-
-          <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Research</a>
-            <ul class="dropdown-menu">
-               <li class="grid-demo">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
-                      <div class="col-sm-3 col-md-offset-1 nav-col nav-col">
-                        <a href="#">Programs</a>
-                        <a href="#">Member Directory</a>
-                        <a href="#">Shared Resources</a>
-                      </div>
-                      <div class="col-sm-3 nav-col"><a href="#">Research 2</a></div>
-                      <div class="col-sm-2 nav-col related-links">
-                        <h3 class="title">Related Links</h3>
-
-                        <a href="#">link 1</a>
-                        <a href="#">link 2</a>
-                        <a href="#">link 3</a>
-                      </div>
-                    </div>
-                  </li>
-             </ul>
-          </li>
-          
-          <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Education & Training</a>
-            <ul class="dropdown-menu">
-               <li class="grid-demo">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
-                      <div class="col-sm-3 col-md-offset-1 nav-col nav-col"><a href="#">Education & Training Menu 1</a></div>
-                      <div class="col-sm-3 nav-col"><a href="#">Education & Training Menu 2</a></div>
-                      <div class="col-sm-2 nav-col related-links">
-                        <h3 class="title">Related Links</h3>
-
-                        <a href="#">link 1</a>
-                        <a href="#">link 2</a>
-                        <a href="#">link 3</a>
-                      </div>
-                    </div>
-                  </li>
-             </ul>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-</div> <!--/.nav-bg -->
     
 
-</div> <!-- end hero -->
 
+    <div class="hero">
+        <div class="nav-bg">
+            
 
+            <nav class="navbar main-nav hidden-xs yamm" role="navigation">
+                <div class="container">
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown yamm"><a href="#" class="" data-toggle="">Patient Care</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-grid">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
+                                                <div class="col-sm-4 col-md-3 col-sm-offset-1 col-md-offset-1 nav-col">
+                                                    <a href="#">Find a Doctor</a>
+                                                    <a href="#">Become a Patient</a>
+                                                    <a href="#">Treatment</a>
+                                                </div>
+                                                <div class="col-sm-4 col-md-3 nav-col">
+                                                    <a href="#">Prevention and screening</a>
+                                                    <a href="#">Living with cancer</a>
+                                                    <a href="#">Patient portal</a>
+                                                </div>
+                                                <div class="col-sm-2 nav-col related-links hidden-sm">
+                                                    <h3 class="title">Related pages</h3>
+                                                    <a href="#">Clinical trials</a>
+                                                    <a href="#">Preventing cancer</a>
+                                                    <a href="#">Survivor health</a>
+                                                </div>
+                                            </div>
+                                    </li>
+                                </ul>
 
-    <!-- Bootstrap core JavaScript
+                            </li>
+                            <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Research</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-grid">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
+                                                <div class="col-sm-3 col-md-offset-1 nav-col nav-col">
+                                                    <a href="#">Programs</a>
+                                                    <a href="#">Member Directory</a>
+                                                    <a href="#">Shared Resources</a>
+                                                </div>
+                                                <div class="col-sm-3 nav-col"><a href="#">Research 2</a></div>
+                                                <div class="col-sm-2 nav-col related-links">
+                                                    <h3 class="title">Related pages</h3>
+                                                    <a href="#">link 1</a>
+                                                    <a href="#">link 2</a>
+                                                    <a href="#">link 3</a>
+                                                </div>
+                                            </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Education & Training</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-grid">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-3 nav-col"><img class="img-responsive" src="../build/images/patient-care.jpg" alt=""></div>
+                                                <div class="col-sm-3 col-md-offset-1 nav-col nav-col"><a href="#">Education & Training Menu 1</a></div>
+                                                <div class="col-sm-3 nav-col"><a href="#">Education & Training Menu 2</a></div>
+                                                <div class="col-sm-2 nav-col related-links">
+                                                    <h3 class="title">Related pages</h3>
+                                                    <a href="#">link 1</a>
+                                                    <a href="#">link 2</a>
+                                                    <a href="#">link 3</a>
+                                                </div>
+                                            </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                        </div>
+              </nav>
+            </div>
+            <!--/.nav-bg -->
+
+            </div>
+            <!-- end hero -->
+            <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../build/vendor/bootstrap.js"></script>
-    <script src="../build/js/all.js"></script>
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="../build/vendor/bootstrap.js"></script>
+            <script src="../build/js/all.js"></script>
+</body>
 
-
-  </body>
 </html>

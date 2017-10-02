@@ -5,7 +5,7 @@ var gutil = require('gulp-util');
 // include plugins
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
+let cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -39,7 +39,7 @@ gulp.task('main-css', function() {
     return es.merge(mainStyles)
     .pipe(concat('main.css'))
   	.pipe(gulp.dest(config.buildDir + '/css'))
-  	.pipe(minifyCss({compatibility: 'ie8'}))
+  	.pipe(cleanCSS({compatibility: 'ie8'}))
   	.pipe(rename('main.min.css'))
   	.pipe(sourcemaps.write('.'))
   	.pipe(plumber.stop())
@@ -58,11 +58,20 @@ gulp.task('landing-css', function() {
     return es.merge(landingStyles)
     .pipe(concat('landing.css'))
     .pipe(gulp.dest(config.buildDir + '/css'))
-    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename('landing.min.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(plumber.stop())
     .pipe(gulp.dest(config.buildDir + '/css'))
+});
+
+// concat css files to all.css
+gulp.task('css', function() {
+  return gulp.src(config.buildDir + '/css/*min.css')
+    .pipe(sourcemaps.init())
+    .pipe(concat('all.css'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.buildDir + '/css'));
 });
 
 // concatinate & minify js
